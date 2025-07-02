@@ -15,7 +15,7 @@ app.get('/', (req, res) => {
 );
 app.post('/data', (req, res) => {
   const data = req.body;
-  console.log('Received data:', data);
+  console.log('Received  response:', data);
   res.status(200).send('Data received successfully');
 });
 
