@@ -23,3 +23,12 @@ export const login = async (req, res) => {
     }
 }
 
+export const getDogs = (req, res) => {
+    const dogs = [
+        { id: 1, name: 'Buddy', breed: 'Golden Retriever' },
+        { id: 2, name: 'Max', breed: 'German Shepherd' },
+        { id: 3, name: 'Bella', breed: 'Labrador Retriever' }
+    ];
+    res.status(200).json({ dogs });
+};
+
