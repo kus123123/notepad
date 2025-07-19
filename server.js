@@ -1,5 +1,6 @@
 import express from 'express';
 import bodyParser from 'body-parser';
+import userRoutes from './routes/user.routes.js';
 
 import catRoutes from './routes/cat.routes.js';
 
@@ -9,6 +10,7 @@ const PORT = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use('/api', userRoutes);
 
 app.use('/api/cats', catRoutes);
 
